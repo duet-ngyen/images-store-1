@@ -1,28 +1,22 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+==== Deployment
 
-Things you may want to cover:
+ssh -i colin-images-store.pem ubuntu@ec2-54-187-202-75.us-west-2.compute.amazonaws.com
 
-* Ruby version
+cd images-store
 
-* System dependencies
+git pull origin master
 
-* Configuration
+bundle install
 
-* Database creation
+rbenv rehash
 
-* Database initialization
+rake db:migrate RAILS_ENV=production
+    rake assets:precompile RAILS_ENV=production
 
-* How to run the test suite
+rbenv sudo passenger stop -p80
 
-* Services (job queues, cache servers, search engines, etc.)
+rbenv sudo passenger start -p80 -d -e production
 
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+connect at: ec2-54-187-202-75.us-west-2.compute.amazonaws.com
