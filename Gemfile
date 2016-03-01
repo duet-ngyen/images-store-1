@@ -48,3 +48,5 @@ end
 gem "font-awesome-rails"
 
 gem 'passenger'
+
+gem 'twitter-bootstrap-rails'
