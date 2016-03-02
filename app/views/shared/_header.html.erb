@@ -1,9 +1,9 @@
 <header class="main_header">
   <div class="header_wrapper">
     <div class="logo_sect">
-      <a href="/" class="logo">
+      <%= link_to root_path, data: { no_turbolink: true }, class: 'logo' do %>
         <%= image_tag 'logo.png', class: 'logo_def' %>
-      </a>
+      <% end %>
 
       <!--<div class="slogan">html photo template</div>-->
     </div>
@@ -12,14 +12,15 @@
         <div class="menu-main-menu-container">
           <ul id="menu-main-menu" class="menu">
             <li class="current-menu-parent menu-item-has-children">
-              <a href="/"><span>Home</span></a>
+              <%= link_to "Home", root_path, data: { no_turbolink: true } %>
               <!--<ul class="sub-menu">-->
                 <!--<li class="current-menu-item"><a href="index.html"><span>Slider</span></a></li>-->
               <!--</ul>-->
             </li>
 
             <li class="menu-item-has-children">
-              <a href="#"><span>Contact</span></a>
+              <%= link_to "Contact", root_path, data: { no_turbolink: true } %>
+
               <!--<ul class="sub-menu">-->
                 <!--<li><a href="contacts_fullscreen.html"><span>Fullscreen</span></a></li>-->
                 <!--<li><a href="contact_with_sidebar.html"><span>With Sidebar</span></a></li>-->
@@ -28,16 +29,16 @@
             </li>
           </ul>
         </div>
-        <div class="search_fadder">
+        <!--<div class="search_fadder">-->
 
-            <div class="header_search">
-              <form name="search_form" method="get" action="#" class="search_form">
-                <input type="text" name="s" value="" placeholder="Search the site..." class="field_search">
-              </form>
-            </div>
-        </div>
+            <!--<div class="header_search">-->
+              <!--<form name="search_form" method="get" action="#" class="search_form">-->
+                <!--<input type="text" name="s" value="" placeholder="Search the site..." class="field_search">-->
+              <!--</form>-->
+            <!--</div>-->
+        <!--</div>-->
       </nav>
-      <a class="search_toggler" href="#"></a>
+      <!--<a class="search_toggler" href="#"></a>-->
     </div>
     <div class="clear"></div>
   </div>
