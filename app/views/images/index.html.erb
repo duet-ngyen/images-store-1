@@ -11,6 +11,16 @@
               </a>
             </div>
         <% end %>
+
+        <% @imgs_flickr.each do |img| %>
+            <div class="grid-gallery-item pr0 pt0">
+              <a href="<%= img.url %>" class="prettyPhoto" data-rel="prettyPhoto[gallery99]" title="">
+                <%= image_tag img.url, alt: "", class: "fw_featured_image", width: "540" %>
+                <span class="gallery_fadder"></span>
+                <span class="gallery_ico"><i class="stand_icon icon-eye"></i></span>
+              </a>
+            </div>
+        <% end %>
       </div>
     </div>
 
