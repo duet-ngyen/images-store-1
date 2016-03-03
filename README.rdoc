@@ -2,7 +2,7 @@
 
 ==== Deployment
 
-ssh -i colin-images-store.pem ubuntu@ec2-54-187-202-75.us-west-2.compute.amazonaws.com
+ssh -i "pem_file" ubuntu@ec2-52-26-134-51.us-west-2.compute.amazonaws.com
 
 cd images-store
 
@@ -19,4 +19,4 @@ rbenv sudo passenger stop -p80
 
 rbenv sudo passenger start -p80 -d -e production
 
-connect at: ec2-54-187-202-75.us-west-2.compute.amazonaws.com
+connect at: ec2-52-26-134-51.us-west-2.compute.amazonaws.com
