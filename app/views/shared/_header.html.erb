@@ -28,16 +28,37 @@
                 <!--<li><a href="contact_fullwidth.html"><span>Fullwidth</span></a></li>-->
               <!--</ul>-->
             </li>
+
+            <% if user_signed_in? %>
+                <li class="menu-item-has-children">
+                  <%= link_to current_user.name, root_path, data: { no_turbolink: true } %>
+
+                  <ul class="sub-menu">
+                    <li>
+                      <%= link_to "Sign Out",
+                                  destroy_user_session_path,
+                                  method: :delete,
+                                  data: { no_turbolink: true }, style: 'color: #a94442 !important' %>
+                    </li>
+                  </ul>
+                </li>
+            <% else %>
+                <li class="menu-item-has-children">
+                  <%= link_to "Sign In",
+                              user_omniauth_authorize_path(:facebook),
+                              data: { no_turbolink: true } %>
+                  <ul class="sub-menu">
+                    <li>
+                      <%= link_to "Facebook",
+                                  user_omniauth_authorize_path(:facebook),
+                                  data: { no_turbolink: true } %>
+                    </li>
+                  </ul>
+                </li>
+            <% end %>
           </ul>
         </div>
-        <!--<div class="search_fadder">-->
 
-            <!--<div class="header_search">-->
-              <!--<form name="search_form" method="get" action="#" class="search_form">-->
-                <!--<input type="text" name="s" value="" placeholder="Search the site..." class="field_search">-->
-              <!--</form>-->
-            <!--</div>-->
-        <!--</div>-->
       </nav>
       <!--<a class="search_toggler" href="#"></a>-->
     </div>

@@ -55,3 +55,7 @@ gem 'twitter-bootstrap-rails'
 gem 'unsplash'
 
 gem 'flickr_fu', '~> 0.3.4'
+
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-facebook'
