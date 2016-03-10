@@ -234,6 +234,3 @@ DEPENDENCIES
   uglifier (>= 1.3.0)
   unsplash
   web-console (~> 2.0)
-
-BUNDLED WITH
-   1.11.2
