@@ -45,13 +45,16 @@
             <% else %>
                 <li class="menu-item-has-children">
                   <%= link_to "Sign In",
-                              user_omniauth_authorize_path(:facebook),
+                              user_facebook_omniauth_authorize_path,
                               data: { no_turbolink: true } %>
                   <ul class="sub-menu">
                     <li>
                       <%= link_to "Facebook",
-                                  user_omniauth_authorize_path(:facebook),
+                                  user_facebook_omniauth_authorize_path,
                                   data: { no_turbolink: true } %>
+                    </li>
+                    <li>
+                      <%= link_to "Sign In", user_session_path %>
                     </li>
                   </ul>
                 </li>
